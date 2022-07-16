@@ -56,7 +56,7 @@ export default function App() {
     if (page !== 1) {
       timeoutId.current = setTimeout(() => {
         windowScroll();
-      }, 200);
+      }, 250);
     }
 
     return () => {
