@@ -80,10 +80,12 @@ export default function App() {
 
     const { query } = evt.target.elements;
 
-    setPage(1);
-    setImages([]);
-    setSearchQuery(query.value.trim());
-    setStatus(true);
+    if (searchQuery !== query.value.trim()) {
+      setPage(1);
+      setImages([]);
+      setSearchQuery(query.value.trim());
+      setStatus(true);
+    }
 
     if (query.value.trim() === '') {
       notifyWarning("You haven't entered anything.");
